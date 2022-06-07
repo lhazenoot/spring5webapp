@@ -29,9 +29,8 @@ public class BootStrapData implements CommandLineRunner {
 
         Publisher publisher = new Publisher();
         publisher.setName("SFG Publishing");
-        publisher.setCity("St. Petersburg");
+        publisher.setCity("St Petersburg");
         publisher.setState("FL");
-        publisher.setZip("6668");
 
         publisherRepository.save(publisher);
 
@@ -63,6 +62,5 @@ public class BootStrapData implements CommandLineRunner {
 
         System.out.println("Number of Books: " + bookRepository.count());
         System.out.println("Publisher Number of Books: " + publisher.getBooks().size());
-
     }
 }
