@@ -24,12 +24,12 @@ public class Publisher {
     public Publisher() {
     }
 
-    public Publisher(String name, String addressLine1, String city, String state, String zip) {
-        this.name = name;
-        this.addressLine1 = addressLine1;
-        this.city = city;
-        this.state = state;
-        this.zip = zip;
+    public Set<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(Set<Book> books) {
+        this.books = books;
     }
 
     @Override
@@ -42,14 +42,6 @@ public class Publisher {
                 ", state='" + state + '\'' +
                 ", zip='" + zip + '\'' +
                 '}';
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     @Override
@@ -67,12 +59,12 @@ public class Publisher {
         return id != null ? id.hashCode() : 0;
     }
 
-    public Set<Book> getBooks() {
-        return books;
+    public Long getId() {
+        return id;
     }
 
-    public void setBooks(Set<Book> books) {
-        this.books = books;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -114,5 +106,4 @@ public class Publisher {
     public void setZip(String zip) {
         this.zip = zip;
     }
-
 }

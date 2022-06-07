@@ -25,6 +25,8 @@ public class BootStrapData implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
+        System.out.println("Started in Bootstrap");
+
         Publisher publisher = new Publisher();
         publisher.setName("SFG Publishing");
         publisher.setCity("St. Petersburg");
@@ -32,8 +34,6 @@ public class BootStrapData implements CommandLineRunner {
         publisher.setZip("6668");
 
         publisherRepository.save(publisher);
-
-        System.out.println("Started in Bootstrap");
 
         System.out.println("Publisher Count: " + publisherRepository.count());
 
